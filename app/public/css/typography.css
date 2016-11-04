@@ -1,0 +1,33 @@
+p, label, a {font-family: 'Cutive Mono', monospace;}
+
+h1, h2, h3, h4, h5, h6, button, input {font-family: 'Questrial', sans-serif;}
+
+h1 {
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+a {text-decoration: none;}
+
+button {
+	font-size: 25px;
+  text-decoration: none;
+}
+
+#top a:visited {color:#fff;}
+
+#top  {
+	font-size: 1.25rem;
+}
+
+#logo {
+	font-family: 'Questrial', sans-serif;
+	font-size: 1.75rem;
+	font-weight: bold;
+	color: #fff;
+}
+
+#welcome_message {
+	font-size: 1.25rem;
+	color: #fff;
+}

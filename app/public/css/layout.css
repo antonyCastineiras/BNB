@@ -1,0 +1,60 @@
+button {
+	padding: 5px 20px;
+  margin: 0px 10px 10px 0px;
+}
+
+.container {
+	width: 76.55%;
+	margin: auto;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#top {
+	padding: 0.5rem 0;
+	margin-bottom: 1.5rem;
+}
+
+#logo {
+	float: left;
+}
+
+#top .nav {
+	float: right;
+	display: flex;
+}
+
+#top .nav li {
+	padding: 0 .5rem;
+}
+
+#top .nav li:last-child {
+	padding-right: 0;
+}
+
+#welcome_message {
+	clear: both;
+}
+
+#sign_out_form {
+	clear: both;
+	float: right;
+}
+
+#sign_in_form {
+	clear: both;
+	float: right;
+}
+
+#spaces {
+	width: 100%;
+}
+
+.space_to_rent {
+	width: 80%;
+	margin: auto;
+}

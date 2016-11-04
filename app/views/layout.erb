@@ -2,36 +2,44 @@
 <html>
 <head>
   <title>Makers BnB</title>
+  <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Questrial" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
-  <header id='navigation'>
+  <header id='top' class="clearfix">
 
-    <% if current_user %>
+    <div class="container">
 
-      <p id="welcome_message">Welcome <%= current_user.email %>!</p>
+      <p id="logo"><a href="/">Team 3's<br>BNB</a></p>
+      
+      <% if current_user %>
+        <ul class="nav">
 
-      <form action='/sessions' method='post'>
-        <input type='hidden' name='_method' value='delete' />
-        <button type="submit">Sign out</button>
-      </form>
+          <li><a href="/requests">Requests</a></li>
+          <li><a href="/spaces">Spaces</a></li>
+          <li><a href="/spaces/new">List a Space</a></li>
 
-      <ul>
-        <li><a href="/requests">Requests</a></li>
-        <li><a href="/spaces">Spaces</a></li>
-        <li><a href="/spaces/new">List a Space</a></li>
-      </ul>
+        </ul>
+        <form id="sign_out_form" action='/sessions' method='post'>
 
-    <% else %>
+          <input type='hidden' name='_method' value='delete' />
+          <button type="submit">Sign out</button>
 
-      <% if not_sign_in_page %>
-        <form method='get' action='/sessions/new'>
-          <button id='nav_sign_in' class='sign_in_button' type='submit'>Sign in</button>
         </form>
+        <p id="welcome_message">Welcome <%= current_user.email %>!</p>
+      <% else %>
+
+        <% if not_sign_in_page %>
+          <form id="sign_in_form" method='get' action='/sessions/new'>
+            <button id='nav_sign_in' class='sign_in_button' type='submit'>Sign in</button>
+          </form>
+        <% end %>
+
       <% end %>
-
-    <% end %>
-
+    </div>
   </header>
 
   <% if flash[:errors] && !flash[:errors].empty? %>
@@ -41,7 +49,8 @@
       <% end %>
     </ul>
   <% end %>
-
-  <%= yield %>
+  <div class="container">
+    <%= yield %>
+  </div>
 </body>
 </html>
