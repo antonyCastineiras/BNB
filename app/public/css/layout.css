@@ -112,3 +112,7 @@ button {
 .form_container input, textarea {
 	display: block;
 }
+
+.space_details {
+	display: block;
+}

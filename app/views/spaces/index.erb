@@ -6,7 +6,7 @@
 	<a href="/spaces/<%= space.id %>">
 		<li class="space_to_rent clearfix">
 			<p class="space_name"><%= space.name %></p>
-				<img class="space_image" src="" alt="">
+				<img class="space_image" src=<%= "#{space.images.first.url}" %> alt="">
 			<div class="space_details clearfix">
 				<p class="space_description"><%= space.description[0..20]+"..." %></p>
 				<p class="space_price">£<%= "%.2f" % space.price %></p>
