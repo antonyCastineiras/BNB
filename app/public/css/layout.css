@@ -55,6 +55,60 @@ button {
 }
 
 .space_to_rent {
-	width: 80%;
+	width: 60%;
 	margin: auto;
+	margin-bottom: 1rem;
+}
+
+.space_name {
+	padding: .25rem 0 .25rem .125rem;
+	width: 100%;
+}
+
+.space_image {
+	width: 216px;
+	height: 216px;
+	float: left;
+	margin-right: 4px;
+}
+
+.space_description {
+	padding-top: 4px;
+	display: block;
+}
+
+.space_price {
+	display: block;
+}
+
+.space_available_from, .space_available_to {
+	display: inline-block;
+}
+
+.image_container {
+	display: block;
+}
+
+.image_container .space_image {
+	display: inline-block;
+}
+
+#space_image_container .space_image {
+	float: none;
+}
+
+.form_container {
+	width: 60%;
+	margin: auto;
+}
+
+.form_container label {
+	display: block;
+}
+
+.form_container form {
+}
+
+.form_container input, textarea {
+	display: block;
 }
